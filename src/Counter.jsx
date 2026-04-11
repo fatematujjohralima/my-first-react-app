@@ -1,14 +1,21 @@
-export default function Counter() {
-    return(
-        const [count, setCount] = useState(15);
-        setCount
-        const handleClick = () => {{
-          setCount(count + 1);  
+import { useState } from "react"
 
-        }
-        <div style={}>
+export default function Counter() {
+    const [count,setCount] =useState(0)
+
+    const handleAdd = () => {
+        setCount(count + 1)
+    }
+
+
+    const counterStyle = {
+        border: '2px solid black'
+    }
+    return(
+         
+        <div style={counterStyle}>
             <h3>Count: {count}</h3>
-            <button onClick={handleClick}>Add</button>
+            <button onClick={handleAdd}>Add</button>
 
         </div>
     )
