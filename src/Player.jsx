@@ -23,6 +23,9 @@ export default function Player() {
         <div>
             <h3>BatsMan</h3>
             <h4>Runs: {run}</h4>
+            {
+                run >= 100 ? <h2>Century</h2> : <h2>Not Century</h2>
+            }
             <p> fours: {four} | sixes: {six} </p>
             <button onClick={handleSingle}>Single</button>
             <button onClick={handleFour}>Four</button>
