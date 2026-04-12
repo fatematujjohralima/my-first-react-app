@@ -1,17 +1,25 @@
+import { Suspense } from 'react'
 import './App.css'
 import Counter from './Counter'
 import Player from './Player'
+import Users from './Users'
 
 function App() {
 
   function handleClick() {
     alert('I am clicked')
   }
+
+  const fetchUsers=fetch('https://jsonplaceholder.typicode.com/users')
+  .then(res =>res.json())
   
 
   return (
     <>
       <h3>Hello! I am Fatema Tuj Johra Lima</h3>
+      <Suspense fallback={<h3>Loading...</h3>}>
+        <Users fetchUsers={fetchUsers}></Users>
+      </Suspense>
       <button onClick={handleClick}>Click me</button>
       <Player></Player>
       <Counter></Counter>
