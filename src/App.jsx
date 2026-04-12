@@ -3,6 +3,7 @@ import './App.css'
 import Counter from './Counter'
 import Player from './Player'
 import Users from './Users'
+import CounterApp from './CounterApp'
 
 function App() {
 
@@ -17,6 +18,7 @@ function App() {
   return (
     <>
       <h3>Hello! I am Fatema Tuj Johra Lima</h3>
+      <CounterApp></CounterApp>
       <Suspense fallback={<h3>Loading...</h3>}>
         <Users fetchUsers={fetchUsers}></Users>
       </Suspense>
